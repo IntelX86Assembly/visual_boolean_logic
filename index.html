@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <meta
+    name="description"
+    content="A 3x3 Boolean logic grid puzzle."
+  >
+  <title>Boolean Grid</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game">
+    <header class="game-header">
+      <h1>Boolean Grid</h1>
+      <p>Complete the result grid using the displayed operation.</p>
+    </header>
+
+    <section class="board" aria-label="Boolean grid puzzle">
+      <article class="grid-region input-a-region">
+        <h2>Input A</h2>
+        <div
+          id="input-a"
+          class="logic-grid grid-blue"
+          role="grid"
+          aria-label="First input grid"
+        ></div>
+      </article>
+
+      <div class="operator" aria-label="Boolean operation">
+        <span id="operation">AND</span>
+      </div>
+
+      <article class="grid-region input-b-region">
+        <h2>Input B</h2>
+        <div
+          id="input-b"
+          class="logic-grid grid-yellow"
+          role="grid"
+          aria-label="Second input grid"
+        ></div>
+      </article>
+
+      <div class="equals" aria-hidden="true">=</div>
+
+      <article class="grid-region result-region">
+        <h2>Your Result</h2>
+        <div
+          id="result"
+          class="logic-grid grid-red interactive"
+          role="grid"
+          aria-label="Editable result grid"
+        ></div>
+
+        <p id="status" class="status" aria-live="polite">
+          Click cells to add or remove circles.
+        </p>
+
+        <button id="next-button" class="next-button" type="button" hidden>
+          Next
+        </button>
+      </article>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
